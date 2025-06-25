@@ -281,7 +281,7 @@ inline float3x3 outer(float3 a, float3 b)
 
 inline float2 abs(float2 v)
 {
-    return { abs(v.x), abs(v.y) };
+    return { std::abs(v.x), std::abs(v.y) };
 }
 
 inline float2x2 abs(float2x2 a)

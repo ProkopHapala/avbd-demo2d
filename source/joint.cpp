@@ -44,7 +44,7 @@ void Joint::computeConstraint(float alpha)
     for (int i = 0; i < rows(); i++)
     {
         // Store stabilized constraint function, if a hard constraint (Eq. 18)
-        if (isinf(stiffness[i]))
+        if (std::isinf(stiffness[i]))
             C[i] = Cn[i] - C0[i] * alpha;
         else
             C[i] = Cn[i];
